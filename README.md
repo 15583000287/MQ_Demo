@@ -1,2 +1,4 @@
 # MQ_Demo
-消息队列Demo
+演示消息队列
+ActiveMQ: p2p  pub/sub
+RabbitMQ: SimpleQueue   WorkQueue  pub/sub

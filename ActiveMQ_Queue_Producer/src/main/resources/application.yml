@@ -1,0 +1,8 @@
+spring:
+  activemq:
+    broker-url: tcp://139.196.94.253:61616    # ActiveMQ消息中间件服务器通讯地址
+    user: admin  # 用户名
+    password: admin  #密码
+queue: springboot-queue   #自定义队列名，等下程序中会用到
+server:
+  port: 8080

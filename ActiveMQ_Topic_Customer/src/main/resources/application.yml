@@ -1,0 +1,12 @@
+spring:
+  activemq:
+    broker-url: tcp://139.196.94.253:61616    # ActiveMQ消息中间件服务器通讯地址
+    user: admin  # 用户名
+    password: admin  #密码
+  # 开启发布订阅(注意：SpringBoot整合ActiveMQ默认没有开启发布/订阅模式，因此需要手动配置   点对点模式是自动开启的)
+  jms:
+    pub-sub-domain: true
+
+topic: springboot-topic   #自定义主题名，等下程序中会用到
+server:
+  port: 8082

@@ -7,7 +7,7 @@ import java.io.IOException;
 
 
 /**
- * 点对点模式消费者
+ * 工作队列模式消费者
  */
 public class Customer {
     public static final String QUEUE_NAME = "test_queue";

@@ -6,7 +6,7 @@ import factory.MqConnectionUtils;
 
 
 /**
- * 点对点模式生产者
+ * 简单队列模式(点对点)生产者
  */
 public class Producer {
     public static final String QUEUE_NAME = "test_queue";

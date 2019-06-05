@@ -24,7 +24,8 @@ public class ConsumerSmsDirect {
         //3. 消费者声明队列
         channel.queueDeclare(SMS_QUEUE,false,false,false,null);
         //4. 消费者队列 路由键绑定交换机(可以绑定多个路由键)
-        channel.queueBind(SMS_QUEUE,Direct_NAME,"sms");
+        String routingKey = "sms"; //email
+        channel.queueBind(SMS_QUEUE,Direct_NAME,routingKey);
         //5. 消费者监听消息
         DefaultConsumer defaultConsumer = new DefaultConsumer(channel){
             @Override
@@ -33,6 +34,7 @@ public class ConsumerSmsDirect {
                 System.out.println("短信消费者获取生产消息："+msg);
             }
         };
-        channel.basicConsume(SMS_QUEUE,defaultConsumer);
+        //true 应答
+        channel.basicConsume(SMS_QUEUE,true,defaultConsumer);
     }
 }

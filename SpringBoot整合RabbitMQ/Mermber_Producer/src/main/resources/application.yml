@@ -1,0 +1,13 @@
+spring:
+  rabbitmq:
+    # 连接地址
+    host: 139.196.94.253
+    # 端口号
+    port: 5672
+    # 账号
+    username: guest
+    # 密码
+    password: guest
+    # 地址(类似于数据库名)
+    virtual-host: /admin_vhost
+

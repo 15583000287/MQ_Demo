@@ -34,6 +34,7 @@ public class ConsumerEmailDirect {
                 System.out.println("邮件消费者获取生产消息："+msg);
             }
         };
-        channel.basicConsume(EMAIL_QUEUE,defaultConsumer);
+        //true 应答
+        channel.basicConsume(EMAIL_QUEUE,true,defaultConsumer);
     }
 }
